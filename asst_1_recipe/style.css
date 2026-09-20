@@ -1,0 +1,146 @@
+/* INTENTIONALLY UGLY STARTER STYLES */
+/* These styles are very, very ugly. */
+/* Time to make them attractive, legible, and usable */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    background-image: url("background.jpg");
+    margin: 15px;
+    padding: 10px;
+}
+
+.recipe-container {
+    display: grid; 
+    grid-template-areas: 
+        "header header"
+        "meta meta"
+        "description description"
+        "ingredients instructions"
+        "footer footer";
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    border: 5px solid rgb(43, 32, 0);
+    margin: 10px;
+    padding: 5px;
+}
+
+.recipe-header {
+    grid-area: header;
+    border: 3px dotted rgb(43, 32, 0);
+    text-align: center;
+    padding: 10px; 
+    margin: 15px; 
+}
+
+.recipe-title {
+    color: rgb(7, 84, 94);
+    font-size: 40px;
+}
+
+.recipe-meta {
+    grid-area: meta;
+    background-color: rgb(168, 142, 94);
+    border: 2px dotted rgb(43, 32, 0);
+    padding: 10px; 
+    margin: 15px; 
+}
+
+.recipe-description {
+    grid-area: description;
+    background-color: rgb(169, 158, 138);
+    font-size: 16px;
+    margin: 15px; 
+    padding: 10px; 
+}
+
+.ingredients-section {
+    grid-area: ingredients;
+    margin: 15px; 
+}
+
+.ingredients-list {
+    list-style: disc;
+    margin: 15px; 
+}
+
+.ingredients-list li {
+    padding: 10px;
+    margin: 3px; 
+}
+
+.instructions-section {
+    grid-area: instructions;
+    margin: 15px; 
+}
+
+.instruction-step {
+    margin: 3px;
+    padding: 10px;
+}
+
+.recipe-footer {
+    grid-area: footer;
+    background-color: rgb(168, 142, 94);
+    text-align: left;
+    font-size: 12px;
+    padding: 10px; 
+    max-width: 100%;
+}
+
+.href {
+  text-decoration: underline;
+  color: black; 
+}
+
+.recipe-image {
+    width: 500px;
+    height: 300px;
+    padding: 15px;
+}
+
+* {
+    margin: 2px;
+    padding: 1px;
+}
+
+@media (max-width: 48rem) {
+  .recipe-container {
+    grid-template-areas:
+      "header"
+      "meta"
+      "description"
+      "ingredients"
+      "instructions"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  .recipe-image {
+    width: 90%;
+    height: auto;
+    display: block;
+    padding: none; 
+    margin: auto; 
+  }
+
+  .recipe-footer {
+    font-size: 10px;
+  }
+
+  .instruction-section {
+    display: block;
+
+  }
+
+
+  
+}
